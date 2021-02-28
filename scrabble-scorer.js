@@ -105,7 +105,7 @@ function transform(object) {
   newObj = {}
   for (const key in object) {
     for (let i = 0; i < object[key].length; i++){
-    newObj[object[(key)][i].toLowerCase()] = key
+    newObj[object[(key)][i].toLowerCase()] = Number(key)
     }
   }
   return newObj
