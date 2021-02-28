@@ -80,7 +80,7 @@ const scoringAlgorithms = [
     scorerFunction: simpleScore
   },
   {
-    name: 'Bonus Vowel',
+    name: 'Bonus Vowels',
     description: 'Vowels are 3 pts, consonants are 1 pt.',
     scorerFunction: vowelBonusScore
   },
