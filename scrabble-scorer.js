@@ -63,7 +63,7 @@ function vowelBonusScore(word) {
 
 let scrabbleScore;
 
-function ScrabbleScorer(word) {
+function scrabbleScore(word) {
 	word = word.toLowerCase();
 	let letterPoints = 0 ;
  
@@ -89,7 +89,7 @@ const scoringAlgorithms = [
   {
     name: 'Scrabble',
     description: 'The traditional scoring algorithm.',
-    scorerFunction: ScrabbleScorer
+    scorerFunction: scrabbleScore
   }
 ];
 
@@ -108,6 +108,7 @@ function transform(object) {
     newObj[object[(key)][i].toLowerCase()] = Number(key)
     }
   }
+  console.log(newObj)
   return newObj
 };
 
