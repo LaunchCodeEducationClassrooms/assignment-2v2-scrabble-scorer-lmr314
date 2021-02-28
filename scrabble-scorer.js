@@ -106,7 +106,6 @@ function transform(object) {
     newObj[object[(key)][i].toLowerCase()] = Number(key)
     }
   }
-  console.log(newObj)
   return newObj
 };
 
