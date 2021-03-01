@@ -97,7 +97,7 @@ function scorerPrompt() {
 
 
 function transform(object) {
-  newObj = {' ': 0}
+  newObj = {}
   for (const key in object) {
     for (let i = 0; i < object[key].length; i++){
     newObj[object[(key)][i].toLowerCase()] = Number(key)
