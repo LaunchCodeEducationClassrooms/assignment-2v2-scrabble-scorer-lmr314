@@ -87,18 +87,23 @@ const scoringAlgorithms = [
 
 function scorerPrompt() {
   gameChoice = Number(input.question(`Which scoring algorithm would you like to use?\n\n0 - Simple: One point per character\n1 - Vowel Bonus: Vowels are worth 3 points\n2 - Scrabble: Uses scrabble point system\nEnter 0, 1, or 2: `));
+  while (gameChoice !== 0 && gameChoice !== 1 && gameChoice !== 2) { 
+    gameChoice = Number(input.question('You did not choose a valid game. Please Enter 0, 1, or 2: '))
+  }
   console.log(`Score for '${userWord}': ${scoringAlgorithms[gameChoice].scoringFunction(userWord)}`)
   return gameChoice
+  
 };
 
 
 function transform(object) {
-  newObj = {}
+  newObj = {' ': 0}
   for (const key in object) {
     for (let i = 0; i < object[key].length; i++){
     newObj[object[(key)][i].toLowerCase()] = Number(key)
     }
   }
+
   return newObj
 };
 
